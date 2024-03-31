@@ -17,5 +17,8 @@ I'm learning data science bootcamp. There are 10 sprints in the program.
 - Essential Statistics
 - Machine Learning for Data Analyst
 - Python programming
-- Essential
+- Essential Python for Data Analyst
+- Dashboard with Looker Studio
+
+Contact : topthanachit111@gmail.com
 
