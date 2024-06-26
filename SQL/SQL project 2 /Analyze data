@@ -1,0 +1,20 @@
+SELECT 
+  rider_name,
+  SUM(Price) AS total_price
+from riders
+JOIN cashiers
+  on riders.riderid = cashiers.riderid 
+group by rider_name
+order by total_price DESC;
+
+
+Select 
+  customer_name,
+  SUM(price)
+from (
+  SELECT * from customers
+  where customer_name ="Top") AS t1
+JOIN (
+  SELECT * from orders
+  where paymentid = "pay02") AS t2
+on t1.customerid = t2.customerid ;
