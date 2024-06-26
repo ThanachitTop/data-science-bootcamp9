@@ -1,1 +1,60 @@
+-- which menu is the most popular?
+SELECT 
+  menus.name,
+  SUM(menus.price)
+FROM menus
+JOIN kitchens ON kitchens.menuid = menus.menuid
+JOIN orders ON orders.orderid = kitchens.orderid
+GROUP BY 1 
+ORDER BY 2 DESC;
 
+-- customer who ordered the most?
+SELECT 
+  customers.customer_name,
+  COUNT(*)
+FROM customers
+JOIN orders ON orders.customerid = customers.customerid 
+group by 1
+ORDER BY 2 DESC;
+
+
+-- customer who ordered beer during half year first 2024
+with menu_beer AS (
+  SELECT * FROM menus
+  WHERE name = 'Beer'
+), 
+orderm1_m6 AS (
+  SELECT * FROM orders
+  WHERE d BETWEEN'2024-01-01' AND '2024-06-30'
+)
+
+SELECT
+customer_name, 
+  COUNT(*)
+FROM customers
+JOIN orderm1_m6 ON orderm1_m6.customerid = customers.customerid 
+JOIN kitchens ON kitchens.orderid = orderm1_m6.orderid 
+JOIN menu_beer ON menu_beer.menuid = kitchens.menuid
+GROUP BY 1
+ORDER BY 2 DESC;
+
+-- rider who ordered the most ?
+select 
+  riders.rider_name,
+    COUNT(*)
+FROM riders 
+JOIN cashiers ON cashiers.riderid = riders.riderid 
+JOIN orders ON orders.cahierid = cashiers.cashierid
+WHERE riders.riderid != 'rider1'
+GROUP BY 1
+ORDER BY 2 DESC;
+
+-- which menu is the most popular?  
+SELECT 
+  menus.name, 
+    COUNT(*)
+FROM menus
+JOIN kitchens ON kitchens.menuid = menus.menuid 
+JOIN orders oN orders.orderid = kitchens.orderid
+GROUP BY 1
+ORDER BY 2 DESC;
