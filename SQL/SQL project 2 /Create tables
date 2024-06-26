@@ -1,0 +1,66 @@
+-- customers -- 
+create table customers (
+  	customerid TEXT PRIMARY KEY,
+ 	customer_name TEXT, 
+ 	region TEXT,
+ 	dob 'YYYY-MM-DD',
+	phone TEXT,
+	gender TEXT 
+);
+
+-- orders --
+create table orders (
+  	orderid TEXT PRIMARY KEY,
+  	customerid TEXT,
+  	cahierid TEXT,
+	d 'YYYY-MM-DD',
+	employeeid TEXT
+);
+
+-- employees -- 
+create table employees (
+	employeeid TEXT primary KEY,
+	employee_name TEXT 
+);
+
+-- menus --
+create table menus (
+  	menuid TEXT primary KEY,
+  	pizza_name TEXT,
+ 	price integer
+);
+
+-- counter -- 
+create table kitchens (
+  	kitchenid TEXT primary KEY,
+  	menuid TEXT,
+	orderid TEXT,
+	hereorgoid TEXT
+);
+
+-- hereorgo 00 
+create table hereorgos (
+	hereorgoid TEXT primary KEY,
+	name TEXT 
+);
+
+-- cashiers --
+create table cashiers (
+	cashierid TEXT primary KEY,
+	orderid TEXT,
+	riderid TEXT
+	paymentid TEXT,
+	price integer 
+);
+
+-- riders --
+create table riders (
+  	riderid TEXT primary key,
+  	rider_name TEXT
+);
+
+-- payments -- 
+create table payments (
+  	paymentid TEXT primary KEY,
+  	payment_name TEXT
+);
