@@ -1,7 +1,0 @@
-# Restaurant Pizza 1 
-## Create tables 
-
-```bash
-  SELECT * FROM customers
-```
-
