@@ -48,5 +48,8 @@ I'm learning data science bootcamp. There are 10 sprints in the program.
   [Power BI](https://github.com/ThanachitTop/Power-BI)
 
 
+[Certificate](https://github.com/ThanachitTop/Certificate)
+
+
 Contact : top.thanachit.j@gmail.com
 
