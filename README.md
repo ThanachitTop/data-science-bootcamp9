@@ -23,7 +23,7 @@ I'm learning data science bootcamp. There are 10 sprints in the program.
 
 - Data Tranformation
 
-  [Tranform Data](https://enchanted-fiber-d4f.notion.site/Homework-Data-Tranformaiton-c8eaa6cacc814ba8bc880bc14059793b)
+  [Tranform Data]([https://enchanted-fiber-d4f.notion.site/Homework-Data-Tranformaiton-c8eaa6cacc814ba8bc880bc14059793b](https://enchanted-fiber-d4f.notion.site/Data-Tranformaiton-518a56bb55ef4830ae095840aba852e3?pvs=4))
   
 - Data Visualization
 
